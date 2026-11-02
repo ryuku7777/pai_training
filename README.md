@@ -1,3 +1,15 @@
+# Physical AI 応用編1 最終課題
+
+## 概要
+CRANE+ V2マニピュレータを対象に、ACT（Action Chunking with Transformers）を用いて
+自律的なお辞儀動作に連動した手先（グリッパー）把持タスクを学習・実行したコード一式です。（第5回講義をもとに、独自のタスクを一連の流れに沿って実施。）
+
+## 主な変更点・工夫
+- `configs/train_config.yaml`:
+  - タイムスタンプ設定（`delta_timestamps.action`）を現在時刻基準（`0.0`〜`1.5`）に最適化。
+  - 状態空間の重複によるデッドロックを回避するため、単調遷移する動作シーケンスを独自に設計・収集。
+---
+
 # Physical AI Imitation Learning excercise
 
 ## Features
